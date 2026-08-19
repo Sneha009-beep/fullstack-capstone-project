@@ -6,7 +6,7 @@ const pinoLogger = require('./logger');
 
 const connectToDatabase = require('./models/db');
 const {loadData} = require("./util/import-mongo/index");
-
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 app.use("*",cors());
@@ -47,6 +47,9 @@ app.use((err, req, res, next) => {
     console.error(err);
     res.status(500).send('Internal Server Error');
 });
+
+app.use('/api/auth', authRoutes);
+
 
 app.get("/",(req,res)=>{
     res.send("Inside the server")

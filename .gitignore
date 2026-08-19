@@ -135,3 +135,4 @@ dist
 giftlink-backend/.env
 giftlink-backend/util/import-mongo/.env
 giftlink-frontend/.env
+giftlink-frontend/src/.env
