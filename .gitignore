@@ -134,3 +134,4 @@ dist
 # Environment files containing passwords
 giftlink-backend/.env
 giftlink-backend/util/import-mongo/.env
+giftlink-frontend/.env
